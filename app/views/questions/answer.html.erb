@@ -1,7 +1,27 @@
-<h1>Questions#answer</h1>
-<!-- <p>Find me in app/views/questions/answer.html.erb</p -->
-<p> <%= @question %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Stupid Coaching</h1>
+      <blockquote>
+        <cite>You</cite>
+        <p>
+          <% if @question.blank? %>
+            😶
+          <% else %>
+            <%= @question %>
+          <% end %>
+        </p>
+      </blockquote>
+      <blockquote class="coach">
+        <cite>Your coach</cite>
+        <p><%= @answer %></p>
+      </blockquote>
+       <%= render "questions/ask" %>
+    </div>
+  </div>
+</div>
 
-<p> <%= @answer %></p>
 
-<%= link_to "ask a question", ask_path %>
+
+
+
